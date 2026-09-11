@@ -764,8 +764,8 @@ def check_entity_tombstones(
         by_kind.setdefault(api_kind, []).append(entity_id)
 
     # ``no_autoflush`` mirrors the defensive posture of the listener-
-    # side reads. Today's callers run from request-path code with no
-    # pending writes; a future caller that probes tombstones before a
+    # side reads. Callers are expected to run from request-path code with
+    # no pending writes; a caller that probes tombstones before a
     # flush would otherwise trigger autoflush mid-read.
     with db.session.no_autoflush:
         for api_kind, entity_ids in by_kind.items():

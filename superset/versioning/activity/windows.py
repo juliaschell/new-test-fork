@@ -82,9 +82,9 @@ def attachment_windows(
     # transaction, this cannot represent a *remove-then-re-add* of the same
     # association in one transaction (it would read the same as add-then-remove
     # → no window). That relies on no write path emitting DELETE-then-INSERT
-    # for the same association within a single transaction — which holds today
-    # (a chart is detached or attached in a save, not both), so the case is
-    # latent, not live. Revisit this pairing if such a write path is added.
+    # for the same association within a single transaction (a chart is
+    # detached or attached in a save, not both), so the case is latent, not
+    # live. TODO: revisit this pairing if such a write path is added.
     rows_sorted = sorted(rows, key=lambda r: (r[0], r[1], r[2]))
     for assoc_id, group in groupby(rows_sorted, key=lambda r: r[0]):
         open_tx: int | None = None

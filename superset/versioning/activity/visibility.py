@@ -164,7 +164,7 @@ def _resolve_visibility(
             continue
         if api_kind not in NAME_COLUMN:
             # Kind isn't in the change-records taxonomy at all — not
-            # something the activity-view emits today. Pass through so
+            # something the activity-view emits. Pass through so
             # the decorator can mark it as a tombstone if appropriate.
             for entity_id in entity_ids:
                 visible[(api_kind, entity_id)] = True

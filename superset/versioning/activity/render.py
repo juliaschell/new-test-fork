@@ -223,8 +223,8 @@ def _lookup_entity_uuids(
     # change-record listeners: this helper reads from live tables to
     # resolve uuids, and a future caller that resolves an entity before
     # the parent flush would otherwise trigger autoflush mid-read.
-    # Today's call sites run from request-path code with no pending
-    # session state, so the cost of the guard is zero.
+    # Call sites are expected to run from request-path code with no
+    # pending session state, in which case the guard costs nothing.
     with db.session.no_autoflush:
         for api_kind, entity_ids in by_kind.items():
             if api_kind not in NAME_COLUMN:

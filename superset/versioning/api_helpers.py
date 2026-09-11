@@ -284,8 +284,8 @@ def resolve_endpoint_path_entity(
         raise PathEntityResponseError(api.response_404())
 
     # Direct ``[…]`` would leak the unknown model name into a generic 500
-    # via the unhandled ``KeyError`` exception text. The three resource
-    # families wired today cover every key; a future entity added to the
+    # via the unhandled ``KeyError`` exception text. The dispatch table
+    # covers every wired resource family; an entity added to the
     # versioning surface without updating this dispatch table should fail
     # closed (the test suite picks it up) rather than silently disclose.
     kwarg = _RAISE_FOR_ACCESS_KWARG.get(model_cls.__name__)
