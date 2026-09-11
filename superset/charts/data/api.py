@@ -205,7 +205,7 @@ class ChartDataRestApi(ChartRestApi):
                 return self.response_403()
 
             if efd := dashboard_filter_context.extra_form_data:
-                # Note: this helper currently mutates `json_body` and `efd` in place.
+                # Note: this helper mutates `json_body` and `efd` in place.
                 # Changes won't persist as these are dicts detached from the ORM state,
                 # but highlighting in case they're further used (mind the changes).
                 apply_dashboard_filter_context(json_body, efd)
@@ -744,7 +744,7 @@ class ChartDataRestApi(ChartRestApi):
         query_context = result["query_context"]
         result_format = query_context.result_format
 
-        # Only support CSV streaming currently
+        # Only CSV streaming is supported
         if result_format.lower() != "csv":
             return False
 
