@@ -1,7 +1,3 @@
-import { useEffect } from 'react';
-import { NativeFilterType, usePrevious } from '@superset-ui/core';
-import { FilterRemoval } from './types';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,6 +16,9 @@ import { FilterRemoval } from './types';
  * specific language governing permissions and limitations
  * under the License.
  */
+import { useEffect } from 'react';
+import { NativeFilterType, usePrevious } from '@superset-ui/core';
+import { FilterRemoval } from './types';
 
 export const useRemoveCurrentFilter = (
   removedFilters: Record<string, FilterRemoval>,

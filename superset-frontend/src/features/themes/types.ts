@@ -1,5 +1,3 @@
-import User from 'src/types/User';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -18,6 +16,8 @@ import User from 'src/types/User';
  * specific language governing permissions and limitations
  * under the License.
  */
+import User from 'src/types/User';
+
 export type ThemeObject = {
   id?: number;
   uuid?: string;

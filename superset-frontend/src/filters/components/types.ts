@@ -1,6 +1,3 @@
-import { SetDataMaskHook } from '@superset-ui/core';
-import { FilterBarOrientation } from 'src/dashboard/types';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,6 +16,9 @@ import { FilterBarOrientation } from 'src/dashboard/types';
  * specific language governing permissions and limitations
  * under the License.
  */
+import { SetDataMaskHook } from '@superset-ui/core';
+import { FilterBarOrientation } from 'src/dashboard/types';
+
 export interface PluginFilterStylesProps {
   height: number;
   width: number;
