@@ -1,7 +1,3 @@
-import { JsonObject } from '@superset-ui/core';
-import { InputProps } from '@superset-ui/core/components';
-import { ChangeEvent, EventHandler, FormEvent } from 'react';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -20,6 +16,10 @@ import { ChangeEvent, EventHandler, FormEvent } from 'react';
  * specific language governing permissions and limitations
  * under the License.
  */
+import { JsonObject } from '@superset-ui/core';
+import { InputProps } from '@superset-ui/core/components';
+import { ChangeEvent, EventHandler, FormEvent } from 'react';
+
 type DatabaseUser = {
   first_name: string;
   last_name: string;

@@ -1,6 +1,3 @@
-import { Currency, type DatasourceType } from '@superset-ui/core';
-import Subject from 'src/types/Subject';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,6 +16,9 @@ import Subject from 'src/types/Subject';
  * specific language governing permissions and limitations
  * under the License.
  */
+import { Currency, type DatasourceType } from '@superset-ui/core';
+import Subject from 'src/types/Subject';
+
 export type ColumnObject = {
   id: number;
   column_name: string;

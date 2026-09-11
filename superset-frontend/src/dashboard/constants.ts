@@ -1,6 +1,3 @@
-import { DatasourceType, NativeFilterScope } from '@superset-ui/core';
-import { Datasource } from 'src/dashboard/types';
-import { DASHBOARD_ROOT_ID } from './util/constants';
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,6 +16,10 @@ import { DASHBOARD_ROOT_ID } from './util/constants';
  * specific language governing permissions and limitations
  * under the License.
  */
+import { DatasourceType, NativeFilterScope } from '@superset-ui/core';
+import { Datasource } from 'src/dashboard/types';
+import { DASHBOARD_ROOT_ID } from './util/constants';
+
 export const PLACEHOLDER_DATASOURCE: Datasource = {
   id: 0,
   type: DatasourceType.Table,
